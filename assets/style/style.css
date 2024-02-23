@@ -1,0 +1,201 @@
+*,body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    background-color: #0E8388;
+    font-family: 'Roboto', sans-serif;
+    position: sticky;
+    top: 0;
+}
+header h2{
+    color: white;
+    cursor: pointer;
+}
+header nav.navbar{
+    display: flex;
+}
+nav.navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+}
+nav.navbar ul li a{
+    font-size: 17px;
+    text-decoration: none;
+    color: #B5C0D0;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+nav.navbar ul li a:hover{
+    color: white;
+}
+nav.navbar ul li a.active{
+    color: white;
+    font-weight: 700;
+}
+main{
+    display:flex ;
+    width: 100%;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+main div.content{
+    flex: 3;
+    flex-direction: column;
+    background-color: #0E8388;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px rgb(43, 42, 42);
+}
+div.content section.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 10px;
+    padding: 1rem;
+}
+section.wrapper .pagination{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pagination p{
+    color: white;
+    font-weight: 600;
+}
+.pagination button{
+    width: 20%;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .8s ease-in-out;
+}
+.pagination button:hover{
+    background-color: white;
+    color: black;
+}
+section.book{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+article.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    width: 25%;
+    min-height: 250px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.788);
+    border-radius: 10px;
+    gap: 5px;
+}
+.card img{
+    height: 100%;
+    width: 70%;
+}
+.card .title{
+    font-size: 15px;
+    color: black;
+    text-align: center;
+}
+.card button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #0E8388;
+    transition: .8s ease-in-out;
+    cursor: pointer;
+}
+.card button:hover{
+    border: 2px solid;
+    background-color: #0E8388;
+    color: white;
+}
+main aside{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px 2px rgb(43, 42, 42);
+    background-color: #0E8388;
+    border-radius: 10px;
+    color: white;
+    height: 500px;
+}
+aside img{
+    height: 300px;
+    width: 50%;
+}
+aside table{
+    width: 50%;
+    gap: 20px;
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0E8388;
+    padding: 15px 10px;
+    color: white;
+}
+@media screen and (max-width: 1200px) {
+    main{
+        flex-direction: column;
+    }
+    main div.content{
+        flex: 5;
+    }
+    main aside{
+        flex: 5;
+        text-align: center;
+    }
+    aside img{
+        width: 25%;
+    }
+    aside table{
+        min-width: 50%;
+    }
+}
+@media screen and (max-width: 764px) {
+    article.card{
+        width: 45%;
+    }
+    aside img, aside table{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 464px) {
+    article.card{
+        width: 45%;
+    }
+    aside img, aside table{
+        width: 90%;
+    }
+}
